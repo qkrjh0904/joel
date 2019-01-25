@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>카드만들기</title>
+
+<style>
+	.box1 {
+		border-radius: 10px;
+		border: 2px solid #73AD21;
+		background-color : #73AD21;
+		padding: 10px; 
+		margin : 10px;
+		width: 400px;
+		height: 20px; 
+		color : white;
+		text-align : center;
+	}
+	.box2 {		 
+		padding: 10px; 
+		margin : 10px;
+		width: 400px; 
+		text-align : center;
+	} 
+	.box3 {
+		margin : 10px;
+		padding: 10px;
+		font-size : 14px;
+		color : red;
+		text-align : center;
+	}
+	#msgimg {
+		width : 400px; 
+		margin : 10px;
+		padding: 10px;  
+		border: 1px solid #73AD21;
+		text-align : center;
+	}
+	 
+	.card {
+		width : 60px;
+		height :60px;
+		border: 2px solid #73AD21;
+		border-radius: 5px;
+		margin: 5px;
+		padding-top:6px;
+		font-size: 25px;
+		float: left;
+	}
+	.cardClear {
+		clear : both;
+	}
+	#msg {
+		border-radius: 5px;
+		border: 2px solid #73AD21;
+		padding: 10px; 
+		margin:10px;
+		width: 400px;
+		height: 50px; 
+		font-size:30px;
+		text-align:center;
+		float : left;
+	}
+	p {
+		color : red ;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script>
+	var count=0;
+	var sum=0;
+	function init(){
+		$("#txt1").text("");
+		$("#msg").text("");
+		$(".box3").text("");
+		
+		count=0;
+		sum=0;
+	}
+	
+	function createRandom(){
+		if( parseInt($("#txt1").val()) < 3 ){
+			alert("카드 개수는 3개 이상으로 입력해야 합니다.");
+			$("#txt1").focus();
+			return;
+		}
+		
+		var n = parseInt($("#txt1").val());
+		arr = new Array(n);
+		
+		for(var i=0; i<n; ++i){
+			arr[i] = Math.floor(Math.random()*100);
+		}
+		
+		createDiv();
+	}
+	
+	function createDiv(){
+		var cnt=0;
+		var str="";
+		for(var i=0; i<arr.length; ++i){
+			cnt++;
+			str = str + "<div class='card'>" + arr[i] + "</div>";
+			if(cnt%5==0)
+				str = str + "<div class='cardClear'></div>";
+		}
+		$(".box3").html(str);
+		
+	}
+	
+	function createSplit(){
+		arr = $("#txt1").val().split(",");
+		
+		if( arr.length < 3 ){
+			alert("카드 개수는 3개 이상으로 입력해야 합니다.");
+			$("#txt1").focus();
+			return;
+		}
+		createDiv();
+	}
+	
+	$(document).ready(function(){
+		$("#bt1").click(function(){
+			if( $("#txt1").val() == "" ){
+				alert("카드자료를 입력하세요");
+				$("#txt1").focus();
+				return ;
+			}
+			if( $(".box3").text() != "" ){
+				alert("카드가 이미 생성이 되어 있습니다.\n생성된 카드를 지우고 다시 생성 합니다.");
+				init();
+			}
+			if( $("#txt1").val().indexOf(",")<0 )
+				createRandom();
+			else
+				createSplit();
+		});
+		
+		$(".box3").on("click", ".card", function(event){
+			count++;
+			if(count > 3){
+				alert("3개의 카드를 선택했습니다.");
+				return ;
+			}
+			
+			$(this).css("background-color", "yellow");
+			sum = sum + parseInt($(this).text());
+			var str = $("#msg").text();
+			str = str + $(this).text();
+			if(count < 3)
+				str = str + " + ";
+			else
+				str = str + " = " + sum;
+			
+			$("#msg").text(str);
+		});
+		
+		$("#bt2").click(function(){
+			arr.sort(function(a, b){return a-b;});
+			init();
+			createDiv();
+		});
+		
+		$("#bt3").click(function(){
+			init();
+			$("input[type=text]").val("");
+		});
+	});
+</script>
+</head>
+<body>
+<form name="myform">
+	<div class="box1">
+		카드만들기 
+	</div>
+	<div class="box2">
+		카드내용 <input type="text" name="txt1" id="txt1">
+		<p>
+		(,로 구분된 카드목록이나 카드개수를 입력하세요.)
+		</p>
+		<input type="button" value="카드보기" id="bt1">
+		<input type="button" value="정렬하기" id="bt2">
+		<input type="button" value="지우기" id="bt3">
+	</div> 	
+	<div id="msg">
+	</div>
+	<div class='cardClear'></div>
+	<div class="box3"></div>
+	
+</form>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>계산기</title>
+		<style>
+			.header{
+				width : 30%;
+				margin : 20px;
+				padding : 10px;
+				background-color : #E65100;
+				color : white;
+				font-size : 25px;
+				text-align : center;
+				border-radius : 10px;
+			}
+			form{
+				width : 30%;
+				padding : 10px;
+				margin : 20px;
+				border : solid 2px #E65100;
+				border-radius : 10px
+				
+			}
+			.box{
+				float : left;
+				padding : 10px;
+				text-align : center;
+			}
+			.in_box{
+				float : left;
+				padding : 5px;
+			}
+			input[type=button], input[type=reset]{
+				width : 50px;
+				height : 30px;
+			}
+			#check{
+				margin : 2px;
+				clear : both;
+				color : #E65100;
+				background-color : #FFECB3;
+				font-weight : bold;
+			}
+			#result{
+				width : 30%;
+				height : 30px;
+				margin : 20px;
+				padding : 10px;
+				border : solid 2px #E65100;
+				border-radius : 10px;
+				text-align : center;
+			}
+		</style>
+		<script>
+			function show(){
+				cal.num1.focus();
+				var num1 = cal.num1.value;	//숫자1
+				var num2 = cal.num2.value;	//숫자2
+				var op = cal.f.value;		//연산자
+				var eq = cal.check.checked;	//수식체크박스
+				
+				//예외처리
+				if(num1==""){
+					alert("숫자1을 입력하세요.");
+					cal.num1.focus();
+					return;
+				}
+				else if(num2==""){
+					alert("숫자2를 입력하세요.");
+					cal.num2.focus();
+					return;
+				}
+				else if(op==""){
+					alert("연산자를 입력하세요.")
+					return;
+				}
+				
+				
+				//결과 값 계산
+				num1 *= 1;
+				num2 *= 1;
+				var result = 0;
+				if(op=="+"){
+					result = num1 + num2;
+				}
+				else if(op=="-"){
+					result = num1 - num2;
+				}
+				else if(op=="*"){
+					result = num1 * num2;
+				}
+				else{
+					result = num1 / num2;
+				}
+				
+				//수식 출력 여부
+				if(eq){
+					document.getElementById("result").innerHTML = num1 + " " + op + " " + num2 + " = " + result;
+				}
+				else{
+					document.getElementById("result").innerHTML = result;
+				}
+				
+			}
+			function erase(){
+				document.getElementById("result").innerHTML = "";
+				cal.num1.focus();
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="header">
+			간단한 계산기
+		</div>
+		<form name="cal" method="post" action="">
+			<div class="box">
+				<input type="text" name="num1" id="num1" placeholder="숫자1" maxlength="10" size="10">
+			</div>
+			<div class="box">
+				<div class="in_box">
+					<input type="radio" name="f" value="+" id="add"><br>
+					<input type="radio" name="f" value="-" id="sub"><br>
+					<input type="radio" name="f" value="*" id="mul"><br>
+					<input type="radio" name="f" value="/" id="div">
+				</div>
+				<div class="in_box">
+					<label for="add">+</label><br>
+					<label for="sub">-</label><br>	
+					<label for="mul">*</label><br>
+					<label for="div">/</label>
+				</div>
+			</div>
+			<div class="box">
+				<input type="text" name="num2" id="num2" placeholder="숫자2" maxlength="10" size="10">
+			</div>
+			<div class="box">
+				<input type="button" value="=" onclick="show()">
+			</div>
+			<div class="box">
+				<input type="button" value="취소" onclick="reset(), erase()">
+			</div>
+			<div id="check">
+				<input type="checkbox" name="check" value="yes" id="ch_box" checked><label for="ch_box">수식포함</label>
+			</div>
+		</form>
+		<div id="result">
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

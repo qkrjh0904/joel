@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>가위바위보</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	var total=0;
+	var correct=0;
+	$(document).ready(function(){
+		$("p>img").click(function(){
+			total++;
+			var isrc = $(this).attr("src");
+			isrc = isrc.replace("./img/", "");
+			isrc = isrc.replace(".png","");
+			
+			var n;
+			var rand = Math.floor(Math.random()*3+1);
+			
+			switch(isrc){
+				case "rock": $("#img1").attr("src", "./img/rock.png"); n=1;			break;
+				case "scissors": $("#img1").attr("src", "./img/scissors.png"); n=2;	break;
+				case "paper": $("#img1").attr("src", "./img/paper.png"); n=3;			break;
+			}
+			switch(rand){
+				case 1: $("#img2").attr("src", "./img/rockcom.png");		break;
+				case 2: $("#img2").attr("src", "./img/scissorscom.png");	break;
+				case 3: $("#img2").attr("src", "./img/papercom.png");		break;
+			}	
+			
+			var str="";
+			if((n==1&&rand==2)||(n==2&&rand==3)||(n==3&&rand==1)){
+				correct++;
+				str = "이김"+"<br>";
+			}
+			else if(n==rand){
+				str = "비김"+"<br>";
+			}
+			else{
+				str = "짐"+"<br>"	
+			}
+			
+			str = str + "전체 횟수 : "+total+" 이긴 횟수 : "+correct+"<br>"+((correct/total)*100).toFixed(2)+"%";
+			$("#msg").html(str);
+			
+		});
+		$("#bt1").click(function(){
+			total=0;
+			correct=0;
+			$("#img1").attr("src", "./img/q.png");
+			$("#img2").attr("src", "./img/q.png");
+			$("#msg").text("");
+		});
+	});
+</script>
+<style>
+	img {
+		width : 80px;
+		height :80px;
+	}
+	.box1 {
+		border-radius: 10px;
+		border: 2px solid #73AD21;
+		background-color : #73AD21;
+		padding: 10px; 
+		margin : 10px;
+		width: 400px;
+		height: 20px; 
+		color : white;
+		text-align : center;
+	}
+	.box2 {		 
+		padding: 10px; 
+		margin : 10px;
+		width: 400px; 
+		text-align : center;
+	} 
+	#msgimg {
+		width : 400px; 
+		margin : 10px;
+		padding: 10px;  
+		border: 1px solid #73AD21;
+		text-align : center;
+	}
+	#msg {
+		width : 400px;
+		height : 60px;
+		margin : 10px;
+		padding: 10px;  
+		border: 1px solid #73AD21;
+		font-size : 14px;
+		color : red;
+		text-align : center;
+	}
+</style>
+ 
+</head>
+<body>
+<form name="myform">
+	<div class="box1">
+		가위바위보게임
+	</div>
+	<div class="box2">
+		<p>
+		<img src="./img/scissors.png" id="i1">
+		<img src="./img/rock.png" id="i2">
+		<img src="./img/paper.png" id="i3">
+		</p>
+		
+		<p>
+		<input type="button" value="다시하기" id="bt1">
+		</p>
+	</div>
+	<div id="msgimg">
+		 <img src="./img/q.png" id="img1"> 
+		 <img src="./img/vs.png">
+		 <img src="./img/q.png" id="img2">
+	</div>
+	<div id="msg">
+		
+	</div>
+</form>
+</body>
+</html>

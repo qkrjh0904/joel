@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jquery연습</title>
+		<style>
+			.box1{
+				border-radius: 10px;
+				border: 2px solid #73AD21;
+				background-color : #73AD21;
+				padding: 10px; 
+				margin : 10px;
+				width: 400px;
+				height: 20px; 
+				color : white;
+				text-align : center;
+			}
+			.box2 {
+				width : 120px ;
+				height : 120px;
+				margin : 10px;
+				padding-top: 50px; 
+				text-align : center;
+				border : 2px solid grey;
+				box-sizing : border-box;
+				float : left ;
+			}
+			form {
+				padding: 10px; 
+				margin : 10px;
+				width: 400px;
+				height: 20px; 
+				text-align : center;
+				clear : both ;				
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				/*
+				$(".box2").click(function(){
+					$(this).hide();
+				});
+				$(".box2").mouseenter(function(){
+					$(this).css("background-color", $(this).text());
+				});
+				var cnt=0;
+				$(".box2").mouseleave(function(){
+					if(cnt%2==0)
+						$(this).css({"background-color":"yellow", "color":"black"});
+					else
+						$(this).css({"background-color":"white", "color":"black"});
+					cnt++;
+				});
+				$("#bt1").click(function(){
+					$("div").show();
+				});
+				$("#bt2").click(function(){
+					$(".box2").hide();
+				});
+				$("#d1").click(function(){
+					$("d1").hide();
+				});
+				*/
+				
+				$(".box2").on({
+					click : function(){
+						$(this).hide();
+					},
+					mouseenter : function(){
+						$(this).css("background-color", $(this).text());
+					},
+					mouseleave : function(){
+						$(this).css({"background-color":"white", "color":"black"});
+					}
+				});
+				
+				$("#bt1").click(function(){
+					$(".box2").show();
+				});
+				$("#bt2").click(function(){
+					$(".box2").hide();
+				});
+				$("#bt3").click(function(){
+					$(".box2").toggle();
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div class="box1">jQuery</div>
+		<div class="box2" id="d1">Red</div>
+		<div class="box2" id="d2">Green</div>
+		<div class="box2" id="d3">Blue</div>
+		<form name="form1">
+			<input type="button" value="모두보기" id="bt1">
+			<input type="button" value="모두숨기기" id="bt2">
+			<input type="button" value="전환하기" id="bt3">
+		</form>
+	</body>
+</html>
+

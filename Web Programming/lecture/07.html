@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>JAVASCRIPT 연습</title>
+		<script>
+		function show1(){
+			document.getElementById("pid1").innerHTML = "안녕하세요.";
+		}
+		function show2(){
+			document.getElementsByTagName("p")[1].innerHTML = "Hello~";
+		}
+		function show3(){
+			document.getElementsByClassName("pc2")[1].innerHTML = "O hai yo!";
+		}
+		function show(n){
+		/*
+			if(n==1){
+				document.getElementById("pid1").innerHTML = "안녕하세요.";
+			}
+			else if(n==2){
+				document.getElementsByTagName("p")[1].innerHTML = "Hello~";
+			}
+			else if(n==3){
+				document.getElementsByClassName("pc2")[1].innerHTML = "O hai yo!";
+			}
+		*/
+			init();
+			switch(n){
+				case 1:
+					document.getElementById("pid1").innerHTML = "안녕하세요.";
+					break;
+				case 2:
+					document.getElementById("pid2").innerHTML = "Hello~";
+					break;
+				case 3:
+					document.getElementById("pid3").innerHTML = "O hai yo!";
+					break;
+			}
+		}
+		function init(){
+			document.getElementById("pid1").innerHTML = "첫번째 영역입니다.";
+			document.getElementById("pid2").innerHTML = "두번째 영역입니다.";
+			document.getElementById("pid3").innerHTML = "세번째 영역입니다.";
+		}
+		</script>
+	</head>
+	<body>
+		<h1>JAVASCRIPT 연습</h1>
+		<p class="pc1" id="pid1">
+			첫번째 영역입니다.
+		</p>
+		<p class="pc2" id="pid2">
+			두번째 영역입니다.
+		</p>
+		<p class="pc2" id="pid3">
+			세번째 영역입니다.
+		</p>
+		<form name="form1">
+			<input type="button" value="첫번째영역" onclick="show(1)">
+			<input type="button" value="두번째영역" onclick="show(2)">
+			<input type="button" value="세번째영역" onclick="show(3)">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>JAVASCRIPT 연습</title>
+		<style>
+		</style>
+		<script>
+		function show(){
+			var num1 = parseInt(form1.num1.value);
+			var num2 = form1.num2.value;
+			var result = num1*1 + num2*1;
+			
+			form1.result.value = result;
+		}
+		</script>
+	</head>
+	<body>
+		<h1>JAVASCRIPT 연습</h1>
+
+		<form name="form1">
+			<input type="text" name="num1" size="4"> +
+			<input type="text" name="num2" size="4">	
+			<input type="button" value="=" onclick="show()">
+			<input type="text" name="result" size="4" readonly>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>계산기</title>
+		<style>
+			.header{
+				width : 30%;
+				margin : 20px;
+				padding : 10px;
+				background-color : #E65100;
+				color : white;
+				font-size : 25px;
+				text-align : center;
+				border-radius : 10px;
+			}
+			form{
+				width : 30%;
+				padding : 10px;
+				margin : 20px;
+				border : solid 2px #E65100;
+				border-radius : 10px
+				text-align : center;
+			}
+			.total_input{
+				text-align : center;
+				margin : 5px;
+			}
+			#result{
+				border : solid 1px #FFE082;
+				height : 30px;
+				margin : 5px;
+				padding : 5px;
+				text-align : center;
+			}
+			input[type=button]{
+				width : 10%;
+				height : 40px;
+				text-align : center;
+				margin : 3px;
+			}
+		</style>
+		<script>
+		var temp="";
+		function show(n){
+			
+			temp += n;
+			document.getElementById("result").innerHTML = temp;
+			if(n=='CE'){
+				temp = temp.substr(0, temp.length-3);
+				document.getElementById("result").innerHTML = temp;
+			}
+			else if(n=='C'){
+				temp = "";
+				document.getElementById("result").innerHTML = temp;
+			}
+			else if(n=='='){
+				temp = temp.substr(0, temp.length-1);
+				document.getElementById("result").innerHTML = temp;
+				evaldo();
+			}
+		}
+		function evaldo(){
+			
+			var answer=eval(temp);
+			document.getElementById("result").innerHTML = answer;
+			
+			return;
+		}
+		</script>
+	</head>
+	
+	<body>
+		<div class="header">
+			자바스크립트 계산기
+		</div>
+		<form name="cal" method="post" action="">
+			<div id="result">
+			</div>
+			<div class="total_input">
+				<div class="input1">
+					<input type="button" value="CE" onclick="show('CE')">
+					<input type="button" value="C" onclick="show('C')">
+					<input type="button" value="." onclick="show('.')">
+					<input type="button" value="/" onclick="show('/')">
+				</div>
+				<div class="input2">
+					<input type="button" value="7" onclick="show('7')">
+					<input type="button" value="8" onclick="show('8')">
+					<input type="button" value="9" onclick="show('9')">
+					<input type="button" value="*" onclick="show('*')">
+				</div>
+				<div class="input3">
+					<input type="button" value="4" onclick="show('4')">
+					<input type="button" value="5" onclick="show('5')">
+					<input type="button" value="6" onclick="show('6')">
+					<input type="button" value="-" onclick="show('-')">
+				</div>
+				<div class="input4">
+					<input type="button" value="1" onclick="show('1')">
+					<input type="button" value="2" onclick="show('2')">
+					<input type="button" value="3" onclick="show('3')">
+					<input type="button" value="+" onclick="show('+')">
+				</div>
+				<div class="input5">
+					<input type="button" value="(" onclick="show('(')">
+					<input type="button" value="0" onclick="show('0')">
+					<input type="button" value=")" onclick="show(')')">
+					<input type="button" value="=" onclick="show('=')">
+				</div>
+			</div>
+		</form>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

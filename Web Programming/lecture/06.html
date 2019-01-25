@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>자바스크립트 예제</title>
+		<style>
+			#msg{
+				color : blue;
+				font-size : 20px;
+				border : solid 2px green;
+				margin-top : 10px;	
+				padding : 10px;
+				width : 300px;
+				height : 100px;
+				text-align : center;
+			}
+		</style>
+		<script>
+		function show(){
+			//변수선언 및 초기화
+			var str = form1.txt1.value;
+			//값 출력
+			//alert(str);
+			//console.log(str);
+			//document.write(str);
+			if(str==""){
+				alert("값을 입력 하세요");
+				form1.txt1.focus();
+				return;
+			}
+			
+			document.getElementById("msg").innerHTML = str;
+			
+		}
+		</script>
+	</head>
+	<body>
+		<form name="form1" method="post" action="">
+			<input type="text" name="txt1" id="itxt1">
+			<input type="button" value="확인" onclick="show();">
+		</form>
+		<div id="msg">
+		</div>
+	</body>
+</html>

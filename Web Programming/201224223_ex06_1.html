@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>form 연습</title>
+		<style>
+			form{
+				width : 30%;
+				border : 1px solid;
+				padding : 20px;
+			}
+			div{
+				margin : 5px;
+				padding : 10px;
+			}
+			#ph1, #ph2, #ph3{
+				width : 25%;
+				height : 30px;
+			}
+			input[type=text], input[type=password]{
+				width : 95%;
+				height : 30px;
+			}
+			#id_email{
+				width : 85%;
+			}
+			
+			textarea{
+				width : 95%;
+				height : 50px;
+			}
+			.box{
+				margin : 0px;
+				border : 1px solid #9e9e9e;
+				width : 91%;
+			}
+			.header{
+				width : 90%;
+				background-color : #73ad21;
+				color : white;
+				font-size : 20px;
+				text-align : center;
+				border-radius : 10px;
+			}
+			.footer{
+				text-align : center;
+			}
+			input[type=button], input[type=reset]{
+				width : 200px;
+				height : 50px;
+				border : none;
+				padding : 10px;
+				background-color : #73ad21;
+				color : white;
+				font-size : 20px;
+				border-radius : 10px;
+				text-align : center;
+			}
+			#information{
+				padding : 20px;
+				margin : 0px;
+				margin-bottom : 5px;
+				border : solid 1px;
+				width : 30%;
+			}
+		</style>
+		<script>
+			function show(){
+				var sch_num = form1.txt_sch_num.value;
+				var name = form1.txt_name.value;
+				var pw = form1.password.value;
+				var email = form1.txt_email.value;
+				var phone_num = form1.phone_head.value + " - " + form1.phone_mid.value + " - " + form1.phone_tail.value;
+				var sex = form1.gender.value;
+				var reason = form1.txt_etc.value;
+				var chbox = form1.ch_box.value;
+				
+				var string = "";
+				string = "학번 : " + sch_num + "<br>";
+				string = string + "성명 : " + name + "<br>";
+				string = string + "비밀번호 : " + pw + "<br>";
+				string = string + "e-mail : " + email + "<br>";
+				string = string + "e-mail 수신 : " + chbox + "<br>"
+				string = string + "폰번호 : " + phone_num + "<br>";
+				string = string + "성별 : " + sex + "<br>";
+				string = string + "신청이유 : " + reason + "<br>";
+				
+				alert("학번 : " + sch_num + "\n" + "성명 : " + name + "\n" + "비밀번호 : " + pw + "\n" + "e-mail : " + email + "\n" + "e-mail 수신 : " + chbox + "\n" + 
+				"폰번호 : " + phone_num + "\n" + "성별 : " + sex + "\n" + "신청이유 : " + reason);
+				
+			}
+		</script>
+	</head>
+	
+	<body>
+
+		<form name="form1" method="post" action="ex04.php">
+			
+			<div class="header">
+				신청서 양식
+			</div>
+			<div>
+				<label for="id_sch_num">학번</label><br>
+				<input type="text" name="txt_sch_num" id="id_sch_num" placeholder="학번 입력">
+			</div>
+			<div>
+				<label for="id_name">성명</label><br>
+				<input type="text" name="txt_name" id="id_name" placeholder="성명 입력">
+			</div>
+			<div>
+				<label for="id_pw">비밀번호</label><br>
+				<input type="password" name="password" id="id_pw" placeholder="비밀번호 입력">
+			</div>
+			<div>
+				<label for="id_email">e-mail</label><br>
+				<input type="text" name="txt_email" id="id_email" placeholder="E-mail 입력">
+				<input type="checkbox" name="ch_box" checked>수신
+			</div>
+			<div>
+				<label>연락처</label><br>
+				<select name="phone_head" id="ph1">
+					<option value="010" selected>010</option>
+					<option value="016">016</option>
+					<option value="019">019</option>
+				</select>
+				-
+				<input type="text" name="phone_mid" maxlength="4" id="ph2">
+				-
+				<input type="text" name="phone_tail" maxlength="4" id="ph3">
+			</div>
+			<div>	<!-- radio는 name이 반드시 같아야한다.-->
+				<div class="box">
+				<label for="id_man">남</label>	
+				<input type="radio" name="gender" value="man" id="id_man" checked>
+				<label for="id_woman">여</label>
+				<input type="radio" name="gender" value="woman" id="id_woman">
+				</div>
+			</div>
+			<div>
+				<label for="id_txt_etc">신청이유</label><br>
+				<textarea name="txt_etc" id="id_txt_etc">
+				</textarea>
+			</div>
+			<div class="footer">
+				<input type="button" value="신청" onclick="show();">
+				<input type="reset" value="취소">
+			</div>
+			
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

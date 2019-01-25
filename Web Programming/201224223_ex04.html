@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>HTML 연습</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<style>
+			*{
+				margin-left : 5px;
+				margin-top : 1px;
+				margin-bottom : 1px;
+				padding : 0px;
+			}
+			header{
+				height : 200px;
+				margin : 0px;
+				padding : 20px;
+				background-color : #155f6d;
+				text-align : left;
+				color : white;
+			}
+			.c3{
+				float : left;
+				text-align : center;
+			}
+			header > img{
+				margin : 0px;
+				padding : 0px;
+				float : left;
+			}
+			nav{
+				clear : both;
+				margin : 0px;
+				padding : 10px;
+				background-color : #1ac2ce;
+				text-align : left;
+			}
+			section{
+				margin : 10px;
+				border : solid 3px #1ac2ce;
+				width : 35%;
+				float : left;
+				height : 200px;
+			}
+			.c1{
+				background-color : #155f6d;
+				color : white;
+				margin : 15px;
+				padding : 10px;
+			}
+			.uc1{
+				margin : 15px;
+				padding-left : 50px;
+			}
+
+			footer{
+				clear : both;
+				margin : 3px;
+				margin-bottom : 100px;
+				padding : 10px;
+				background-color : #c2cdce;
+				text-align : left;
+			}
+			a{
+				text-decoration : none;	
+				text-align : center;
+				width : 100px;
+				padding 5px;
+				box-sizing : border-box;
+			}
+			a:link, a:visited{
+				color : blue;
+			}
+			a:hover, a:active{		/*마우스 위에 놓았을때, 마우스 클릭 했을때*/
+				background-color : white;
+				color : red;
+			}
+			nav>a{
+				padding : 10px;
+			}
+			nav > a:link, nav > a:visited{
+				color : white;
+			}
+			nav > a:hover, nav > a:active{		/*마우스 위에 놓았을때, 마우스 클릭 했을때*/
+				background-color : white;
+				color : #1ac2ce;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<header>
+			
+			<div class="c3"><img width="200px" src="./img/pnu.jpg"></div>
+			<div class="c3">
+				<br><br>
+				<h1>&nbsp;&nbsp;&nbsp;Jeong Ho Park</h1>
+				<br>
+				<h2>&nbsp;&nbsp;&nbsp;박정호</h2>
+			</div>
+		</header>
+		
+		<nav>
+			<a href="#s1">[&lt;개인정보&gt;]</a>
+			<a href="#s2">[&lt;학력사항&gt;]</a>
+			<a href="#s3">[&lt;자격사항&gt;]</a>
+			<a href="#s4">[&lt;자기소개&gt;]</a>
+		</nav>
+		
+		<section id="s1">
+			<h1 class="c1">개인정보</h1>
+			
+			<ul class="uc1">
+				<i class="material-icons">phone</i> 010-4733-4939 <br>
+				<i class="material-icons">email</i> qkrwjdgh0904@naver.com <br>
+				<i class="material-icons">assignment</i> 부산시 금정구 금강로 335번길 93 에이플러스빌 <br>
+			</ul>
+		</section>
+		
+		<section id="s2">
+			<h1 class="c1">&lt;학력사항&gt;</h1>
+			<ul class="uc1">
+				<li><a href="http://www.pusan.ac.kr/kor/Main.do"><img width="15px" src="./img/pnu.jpg">부산대학교 재학</a></li>
+				<li><a href="http://school.gyo6.net/gumigo"><img width="15px" src="./img/gumi_high.jpg">구미고등학교 졸업</a></li>
+				<li><a href="http://school.gyo6.net/seonsan"><img width="15px" src="./img/seonsan_middle.jpg">선산중학교 졸업</a></li>
+				<li><a href="http://school.gyo6.net/sunsanes"><img width="15px" src="./img/seonsan_elementry.jpg">선산초등학교 졸업</a></li>
+			</ul>
+		</section>
+		
+		<section id="s3">
+			<h1 class="c1">&lt;자격사항&gt;</h1>
+			<ol class="uc1">
+				<li>토익</li>
+				<li>토익스피킹</li>
+				<li>토플</li>
+				<li>전기기사</li>
+			</ol>
+		</section >
+		
+		<section id="s4">
+			<h1 class="c1">&lt;자기소개&gt;</h1>
+			<ul class="uc1">
+				<a href="./201224223_ex01.html">SWOT 분석</a><br>
+				안녕하세요 박정호 입니다.
+			</ul>
+		</section>
+
+		
+		<footer>
+			&copy;Jeongho Park (부산시 금정구 금강로 335번길 93 A+빌)
+		</footer>
+		
+
+	</body>
+	
+</html>
+

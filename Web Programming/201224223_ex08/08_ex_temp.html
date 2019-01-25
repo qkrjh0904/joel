@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>카드만들기</title>
+
+<style>
+
+	.box1 {
+		border-radius: 10px;
+		border: 2px solid #73AD21;
+		background-color : #73AD21;
+		padding: 10px; 
+		margin : 10px;
+		width: 400px;
+		height: 20px; 
+		color : white;
+		text-align : center;
+	}
+	.box2 {		 
+		padding: 10px; 
+		margin : 10px;
+		width: 400px; 
+		text-align : center;
+	} 
+	#msg {
+		margin : 10px;
+		padding: 10px;
+		font-size : 14px;
+		color : red;
+		text-align : center;
+	}
+	#msgimg {
+		width : 400px; 
+		margin : 10px;
+		padding: 10px;  
+		border: 1px solid #73AD21;
+		text-align : center;
+	}
+	.b1 {
+		width : 100px;
+		height :100px;
+		font-size : 30px;
+		text-align : center;
+	}
+
+	
+	.card1 {
+		width : 50px;
+		height :60px;
+		border: 2px solid #73AD21;
+		border-radius: 5px;
+		margin: 5px;
+		padding-top:6px;
+		font-size: 25px;
+		float: left;
+	}
+	
+	.card2 {
+		width : 50px;
+		height :60px;
+		background-color: yellow;
+		border: 2px solid #73AD21;
+		border-radius: 5px;
+		margin: 5px;
+		padding-top:6px;
+		font-size: 25px;
+		float: left;
+	}
+	.cardClear {
+		clear : both;
+	}
+</style>
+<script>
+	function showCard(){
+		if(myform.txt1.value==""){
+			alert("시작 숫자를 입력해 주세요.");
+			myform.txt1.focus();
+			return;
+		}
+		if(myform.txt2.value==""){
+			alert("종료 숫자를 입력해 주세요.");
+			myform.txt2.focus();
+			return;
+		}
+		var min = parseInt(myform.txt1.value);
+		var max = parseInt(myform.txt2.value);
+		if(min>max){
+			var temp = min;
+			min = max;
+			max = temp;
+		}
+		
+		var str="";
+		var cnt=0;
+		for(var i=min; i<=max; ++i){
+			if(i%2==0)
+				str = str + "<div class='card2'>" + i + "</div>";
+			else
+				str = str + "<div class='card1'>" + i + "</div>";
+				
+			cnt++;
+			if(cnt%5==0)
+				str = str + "<div class='cardClear'></div>";	
+				
+		}
+		document.getElementById("msg").innerHTML = str;	
+	}
+	
+	function showClear(){
+		myform.reset();
+		document.getElementById("msg").innerHTML = "";	
+	}
+	
+</script>
+</head>
+<body>
+<form name="myform">
+	<div class="box1">
+		카드만들기 
+	</div>
+	<div class="box2">
+		시작 <input type="text" name="txt1" size="6">
+		종료 <input type="text" name="txt2" size="6">
+		<input type="button" value="카드보기" onclick="showCard()">
+		<input type="button" value="지우기" onclick="showClear()">
+	</div> 	 
+	<div id="msg">
+	</div>
+</form>
+</body>
+</html>

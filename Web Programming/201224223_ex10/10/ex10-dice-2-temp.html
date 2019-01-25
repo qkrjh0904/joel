@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>주사위게임</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	var total=0;
+	var correct=0;
+	$(document).ready(function(){
+		$("p>img").click(function(){
+			total++;
+			var isrc = $(this).attr("src");
+			var n=isrc[6];					//1만
+			var photo = isrc.substr(6,5);	//1.png 전체
+			
+			//$("#img1").attr("src", "./img/c"+n+".png");
+			$("#img1").attr("src", "./img/"+photo);
+
+			var rand = Math.floor(Math.random()*6 + 1);
+			$("#img2").attr("src", "./img/c"+rand+".png");
+			
+			if(n==rand){
+				correct++;
+				$("#msg").html("맞췄습니다.<br>전체 횟수 : "+total+" 맞춘 횟수 : "+correct);
+			}
+			else{
+				$("#msg").html("틀렸습니다.<br>전체 횟수 : "+total+" 맞춘 횟수 : "+correct);
+			}
+			
+		});
+		$("p>input").click(function(){
+			total=0;
+			correct=0;
+			$("#img1").attr("src", "./img/q.png");
+			$("#img2").attr("src", "./img/q.png");
+			$("#msg").text("");
+		});
+		
+	});
+</script>
+<style>
+	.box1 {
+		border-radius: 10px;
+		border: 2px solid #73AD21;
+		background-color : #73AD21;
+		padding: 10px; 
+		margin : 10px;
+		width: 400px;
+		height: 20px; 
+		color : white;
+		text-align : center;
+	}
+	.box2 {		 
+		padding: 10px; 
+		margin : 10px;
+		width: 400px; 
+		text-align : center;
+	} 
+	#msg {
+		width : 400px;
+		height : 40px;
+		margin : 10px;
+		padding: 10px;  
+		border: 1px solid #73AD21;
+		font-size : 14px;
+		color : red;
+		text-align : center;
+	}
+	#msgimg {
+		width : 400px; 
+		margin : 10px;
+		padding: 10px;  
+		border: 1px solid #73AD21;
+		text-align : center;
+	}
+	.b1 {
+		width : 100px;
+		height :100px;
+		font-size : 30px;
+		text-align : center;
+	}
+</style>
+ 
+</head>
+<body>
+<form name="myform">
+	<div class="box1">
+		주사위게임
+	</div>
+	<div class="box2">
+		<p>
+		<img src="./img/1.png">
+		<img src="./img/2.png">
+		<img src="./img/3.png">
+		</p>
+		<p>
+		<img src="./img/4.png">
+		<img src="./img/5.png">
+		<img src="./img/6.png">
+		</p>
+		<p>
+		<input type="button" value="다시하기">
+		</p>
+	</div>
+	<div id="msgimg">
+		 <img src="./img/q.png" id="img1"> 
+		 <img src="./img/vs.png">
+		 <img src="./img/q.png" id="img2">
+	</div>
+	<div id="msg">
+		
+	</div>
+</form>
+</body>
+</html>

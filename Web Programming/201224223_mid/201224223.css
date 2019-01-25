@@ -1,0 +1,52 @@
+nav{
+	background-color : #d5d5d5;
+	height : 40px;
+	padding : 0px;
+	margin : 0px;
+}
+section{
+	margin : 5px;
+}
+.c1{
+	float : left;
+	width : 200px;
+	height : 40px;
+	margin-top : 10px;
+	text-align : center;
+}
+#sec{
+	clear : both;
+}
+.c2{
+	border : solid 2px #8c8c8c;
+	width : 500px;
+	height : 250px;
+	float : left;
+}
+a{
+	text-decoration : none;
+	padding : 10px;
+}
+a:hover, a:active{
+	background-color : blue;
+	color : white;
+}
+img{
+	width : 100px;
+	height : 80px;
+}
+h1{
+	color : blue;
+	border : solid blue 0px;
+	border-left-width : 10px;
+	padding : 10px;
+}
+.img{
+	width : 20%;
+	height : 100%;
+	float : left;
+}
+.info{
+	width : 80%;
+	
+}

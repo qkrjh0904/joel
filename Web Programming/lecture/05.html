@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>form 연습</title>
+		<style>
+			form{
+				width : 30%;
+				border : 1px solid;
+				padding : 20px;
+			}
+			label[for]{
+				color : blue;
+			}
+			label{
+				color : red;
+			}
+			div{
+				margin : 10px;
+				padding : 10px;
+				text-align : center;
+			}
+			#id_name, #id_email{
+				width : 200px;
+			}
+			textarea{
+				width : 90%;
+				height : 50px;
+			}
+			input[type=submit], input[type=reset], input[type=button]{
+				width : 200px;
+				height : 50px;
+				border : none;
+				padding : 10px;
+				background-color : #73ad21;
+				color : white;
+				font-size : 20px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<form name="form1" method="post" action="ex04.php">
+			<div>
+				<label for="id_name">성명</label><br>
+				<input type="text" name="txt_name" id="id_name" placeholder="성명 입력">
+			</div>
+			<div>
+				<label for="id_email">e-mail</label><br>
+				<input type="text" name="txt_email" id="id_email" placeholder="e-mail 입력">
+			</div>
+			<div>
+				<label>생년월일</label><br>
+				<input type="text" name="txt_year" id="id_year" maxlength="4" size="4">년
+				<select name="sel_month">
+					<option value="">월 선택</option>
+					<option value="1">1월</option>
+					<option value="2">2월</option>
+					<option value="3">3월</option>
+					<option value="4">4월</option>
+					<option value="5">5월</option>
+					<option value="6">6월</option>
+					<option value="7">7월</option>
+					<option value="8">8월</option>
+					<option value="9">9월</option>
+					<option value="10">10월</option>
+					<option value="11">11월</option>
+					<option value="12">12월</option>
+				</select>
+				<select name="sel_day">
+					<option value="">일 선택</option>
+					<option value="1">1일</option>
+					<option value="2">2일</option>
+					<option value="3">3일</option>
+					<option value="4">4일</option>
+				</select>
+				
+			</div>
+			<div>	<!-- radio는 name이 반드시 같아야한다.-->
+				<label for="id_man">남</label>	
+				<input type="radio" name="gender" value="man" id="id_man" checked>
+				<label for="id_woman">여</label>
+				<input type="radio" name="gender" value="woman" id="id_woman">
+			</div>
+			<div>
+				<label>관심분야</label><br>
+				<label for="id_c">C/C++</label>
+				<input type="checkbox" name="ck_c" id="id_c" value="c">
+				<label for="id_python">Python</label>
+				<input type="checkbox" name="ck_python" id="id_python" value="python">
+				<label for="id_java">JAVA</label>
+				<input type="checkbox" name="ck_java" id="id_java" value="java">
+			</div>
+			<div>
+				<label for="id_txt_etc">기타</label><br>
+				<textarea name="txt_etc" id="id_txt_etc">
+				</textarea>
+			</div>
+			<div>
+				<input type="submit" value="확인">
+				<input type="reset" value="취소">
+			</div>
+			
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

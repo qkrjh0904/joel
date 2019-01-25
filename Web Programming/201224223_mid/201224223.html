@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>중간고사</title>
+		<!--<link rel="stylesheet" type="text/css" href="./201224223.css">-->
+		<style>
+			nav{
+				background-color : #d5d5d5;
+				height : 40px;
+				padding : 0px;
+				margin : 0px;
+			}
+			section{
+				margin : 5px;
+			}
+			.c1{
+				float : left;
+				width : 200px;
+				height : 40px;
+				margin-top : 10px;
+				text-align : center;
+			}
+			#sec{
+				clear : both;
+			}
+			.c2{
+				border : solid 2px #8c8c8c;
+				width : 500px;
+				height : 250px;
+				float : left;
+			}
+			a{
+				text-decoration : none;
+				padding : 10px;
+			}
+			a:hover, a:active{
+				background-color : blue;
+				color : white;
+			}
+			img{
+				width : 100px;
+				height : 80px;
+			}
+			h1{
+				color : blue;
+				border : solid blue 0px;
+				border-left-width : 10px;
+				padding : 10px;
+			}
+			.img{
+				width : 20%;
+				height : 100%;
+				float : left;
+			}
+			.info{
+				width : 80%;
+				height : 100%;
+			}
+			
+		</style>
+		
+		<script>
+		function show(n){
+			document.getElementById("h1").innerHTML = "";
+			document.getElementById("h2").innerHTML = "";
+			document.getElementById("h3").innerHTML = "";
+			document.getElementById("h4").innerHTML = "";
+			if(n==1){
+				document.getElementById("h1").innerHTML = "창의적 지식인";
+			}
+			else if(n==2){
+				document.getElementById("h2").innerHTML = "개방적 지식인";
+			}
+			else if(n==3){
+				document.getElementById("h3").innerHTML = "봉사하는 지식인";
+			}
+			else if(n==4){
+				document.getElementById("h4").innerHTML = "글로벌 전문인";
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="c1">
+				<a href="#pid1" onclick="show(1)">창의적 지식인</a>
+			</div>
+			<div class="c1">
+				<a href="#pid2" onclick="show(2)">개방적 지식인</a>
+			</div>
+			<div class="c1">
+				<a href="#pid3" onclick="show(3)">봉사하는 지식인</a>
+			</div>
+			<div class="c1">
+				<a href="#pid4" onclick="show(4)">글로벌 전문인</a>
+			</div>
+		</nav>
+		
+		<div id="sec">
+			<section class="c2" id="pid1">
+				<div class="img">
+					<img src="./img/image1.png">
+				</div>
+				<div class="info">
+					<h1 id="h1"> </h1>
+					<p>우리 사회와 시대의 흐름을 통찰하여 창조적 지식과 정보를 창출</p>
+					<ul>
+						<li>통섭형 교양교육</li>
+						<li>융복합 전공 교육 및 연구</li>
+						<li>학생자율 교과과정</li>
+					</ul>
+				</div>
+			</section>
+			<section class="c2" id="pid2">
+				<div class="img">
+					<img src="./img/image2.png">
+				</div>
+				<div class="info">
+					<h1 id="h2"> </h1>
+					<p>진리추구의 자유와 타 문화와 사회의 다름을 존중</p>
+					<ul>
+						<li>글로벌 문화 캠퍼스</li>
+						<li>다문화 융합 교육</li>
+						<li>원어민 혼성 수업</li>
+					</ul>
+				</div>
+			</section>
+			<section class="c2" id="pid3">
+				<div class="img">
+					<img src="./img/image3.png">
+				</div>
+				<div class="info">
+					<h1 id="h3"> </h1>
+					<p>국가, 사회를 위해 지식을 활용하고 봉사</p>
+					<ul>
+						<li>전공 연계 국제사회</li>
+						<li>봉사 과정</li>
+						<li>지역 사회 봉사 과정</li>
+					</ul>
+				</div>
+			</section>
+			<section class="c2" id="pid4">
+				<div class="img">
+					<img src="./img/image4.png">
+				</div>
+				<div class="info">
+					<h1 id="h4"> </h1>
+					<p>국제적 수준의 교양과 전문적 지식을 갖춤</p>
+					<ul>
+						<li>국제화 교양교육</li>
+						<li>7+1 국제화 전공교육</li>
+						<li>국제 인증 전공교육</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>jquey</title>
+		
+		<style>
+		.box1 {
+			border-radius: 5px;
+			border: 2px solid #73AD21;
+			padding: 5px; 
+			margin:5px;
+			width: 50px;
+			height: 50px; 
+			font-size:30px;
+			text-align:center;
+			float : left;
+		}
+		.imgBox {
+			width: 40px;
+		}
+		.box2 {
+			clear : both;
+		} 
+		.box3 {
+			width: 200px;
+			height: 50px; 
+			margin:5px;
+			text-align:center;
+		} 
+		#msg {
+			border-radius: 5px;
+			border: 2px solid #73AD21;
+			padding: 5px; 
+			margin:5px;
+			width: 200px;
+			height: 50px; 
+			font-size:30px;
+			text-align:center;
+			float : left;
+		}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			var num = [0,0,0,0,0,0,0,0,1];
+			var flag=false;
+			var cnt=0;
+			function shuffle(){
+				for(var i=0; i<30; ++i){
+					var idx1 = Math.floor(Math.random()*9);
+					var idx2 = Math.floor(Math.random()*9);
+					
+					if(idx1 !=  idx2){
+						var temp = num[idx1];
+						num[idx1] = num[idx2];
+						num[idx2] = temp;
+					}
+				}
+				console.log(num);
+			}
+			
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					shuffle();
+					flag=false;
+					cnt=0;
+					$("#msg").text("");
+					for(var i=1; i<=9; ++i){
+						$("#div"+i).html("");
+						var str = "<img src='./img/q.png' class='imgBox' id='img"+i+"'>";
+						$("#div"+i).html(str);
+					}
+				});
+				
+				//다음과 같이 해야 동적으로 달린 그림에 클릭 이벤트를 걸 수 있다.
+				$(".box1").on("click", ".imgBox", function(){
+					if(flag)	return;
+					
+					var id=$(this).attr("id").replace("img", "");
+					if(num[id-1]==0){
+						var str = "<img src='./img/heart.png' class='imgBox'>";
+						$("#div"+id).html(str);
+						cnt++;
+					}
+					else{
+						var str = "<img src='./img/boom.png' class='imgBox'>";
+						$("#div"+id).html(str);
+						flag = true;
+						$("#msg").text("실패");
+					}
+					
+					console.log(cnt);
+					if(cnt==8){
+						$(".imgBox").attr("src", "./img/smile.png");
+						$("#msg").text("성공");
+						flag = true;
+					}
+				});
+			});
+		</script>
+	</head>
+	
+	<body>	
+		<div id="box">
+			<div class="box1" id="div1"></div>
+			<div class="box1" id="div2"></div>
+			<div class="box1" id="div3"></div>
+			<div class="box2"></div>
+			<div class="box1" id="div4"></div>
+			<div class="box1" id="div5"></div>
+			<div class="box1" id="div6"></div>
+			<div class="box2"></div>
+			<div class="box1" id="div7"></div>
+			<div class="box1" id="div8"></div>
+			<div class="box1" id="div9"></div>
+			<div class="box2"></div>
+		</div> 
+		<div id="msg"></div>
+		<div class="box2"></div>
+		<div class="box3">
+		<input type="button" value="폭탄섞기" id="btn1">
+		</div>
+	</body>
+</html>

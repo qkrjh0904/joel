@@ -1,0 +1,19 @@
+Assignment 3: Rewriting assignment 2 using Linked List
+
+Rewrite your programming of assignment 2 as followings;
+
+-      Stack should be implemented by linked-list
+
+-      Constructor and Destructor of linked-list should be properly done without any garbage.
+
+-      No memory allocation functions and operations (e.g. new, delete, malloc, free) are allowed on linked list data structures except the initialization and termination process. It means you have to prepare all memory space to process your task at the initialization time using the available node pool of linked-list and release it at the termination time.
+
+-      The input and output data formats are the same as the programming assignment 2.
+
+The program should be submitted via ESPA by Nov. 1st, 6:00 pm.
+
+ 
+
+-      Source code : linkstack.cpp OR linkstack.java, Input file : linkstack.inp, output file : linkstack.out
+
+-      Sample data : download

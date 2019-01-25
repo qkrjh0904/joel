@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\quartus\InenOen4bit
+vInenOen4bit
+Z1 !s100 K1DP>^lj:LBOf5e1eL3Vf1
+Z2 Iz?>mZY?Zl^BGH?kSzf:N[0
+Z3 VEG`8khYTNYC?9o;Z0;6BY0
+Z4 dH:\quartus\InenOen4bit
+Z5 w1505299748
+Z6 8H:/quartus/InenOen4bit/InenOen4bit.v
+Z7 FH:/quartus/InenOen4bit/InenOen4bit.v
+L0 19
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|H:/quartus/InenOen4bit/InenOen4bit.v|
+Z10 o-work work -O0
+Z11 n@inen@oen4bit
+!i10b 1
+!s85 0
+Z12 !s108 1505302923.284000
+Z13 !s107 H:/quartus/InenOen4bit/InenOen4bit.v|
+!s101 -O0
+vInenOen4bit_tb
+!i10b 1
+Z14 !s100 zWl7TX4c2BKcNbaQ<o;>@3
+Z15 IS_[]7z@PzhPjmXXYeDoQ`3
+Z16 VD];cHHjXP4ODlMG=X8BT21
+R4
+Z17 w1505299906
+Z18 8H:/quartus/InenOen4bit/InenOen4bit_tb.v
+Z19 FH:/quartus/InenOen4bit/InenOen4bit_tb.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1505302923.394000
+!s107 H:/quartus/InenOen4bit/InenOen4bit_tb.v|
+Z20 !s90 -reportprogress|300|-work|work|H:/quartus/InenOen4bit/InenOen4bit_tb.v|
+!s101 -O0
+R10
+Z21 n@inen@oen4bit_tb

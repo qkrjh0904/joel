@@ -1,0 +1,28 @@
+# Compile of InenOen4bit.v was successful.
+# Compile of InenOen4bit_tb.v was successful.
+# Compile of InenOen8bit.v was successful.
+# Compile of InenOen8bit_tb.v was successful.
+# 4 compiles, 0 failed with no errors. 
+vsim -gui work.InenOen8bit_tb
+# vsim -gui work.InenOen8bit_tb 
+# Loading work.InenOen8bit_tb
+# Loading work.InenOen8bit
+# Loading work.InenOen4bit
+view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+add wave *
+run 2000ps
+quit -sim
+vsim -gui work.InenOen4bit_tb
+# vsim -gui work.InenOen4bit_tb 
+# Loading work.InenOen4bit_tb
+# Loading work.InenOen4bit
+vsim -gui work.InenOen8bit_tb
+# vsim -gui work.InenOen8bit_tb 
+# Loading work.InenOen8bit_tb
+# Loading work.InenOen8bit
+# Loading work.InenOen4bit
+view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+add wave *
+run 2000ps

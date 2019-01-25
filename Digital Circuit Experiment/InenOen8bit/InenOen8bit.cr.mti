@@ -1,0 +1,29 @@
+H:/quartus/InenOen8bit/InenOen8bit.v {1 {vlog -work work H:/quartus/InenOen8bit/InenOen8bit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InenOen8bit
+
+Top level modules:
+	InenOen8bit
+
+} {} {}} H:/quartus/InenOen8bit/InenOen4bit.v {1 {vlog -work work H:/quartus/InenOen8bit/InenOen4bit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InenOen4bit
+
+Top level modules:
+	InenOen4bit
+
+} {} {}} H:/quartus/InenOen8bit/InenOen8bit_tb.v {1 {vlog -work work H:/quartus/InenOen8bit/InenOen8bit_tb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InenOen8bit_tb
+
+Top level modules:
+	InenOen8bit_tb
+
+} {} {}} H:/quartus/InenOen8bit/InenOen4bit_tb.v {1 {vlog -work work H:/quartus/InenOen8bit/InenOen4bit_tb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InenOen4bit_tb
+
+Top level modules:
+	InenOen4bit_tb
+
+} {} {}}

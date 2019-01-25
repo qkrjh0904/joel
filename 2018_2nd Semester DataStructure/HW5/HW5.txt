@@ -1,0 +1,41 @@
+Assignment 5: Center of graph
+
+Write a program that finds the center of a weighted undirected graph, where the center of graph is defined as the node  with the minimum average value of the shortest paths to all other nodes such that  is minimum where  is the set of nodes,  is the number of nodes, and  is the distance of the shortest path from  to . If more than one nodes have the same average value, then the node with smallest node label is to be selected as the center.
+
+The input of the program is given as follows;
+
+---
+
+N // the number of nodes, where node label is given from 1 to N
+
+K // the number of edges
+
+n1 n1d w1 //n1s and n1d are the source node and destination node and w1 is the weight
+
+¡¦
+
+nKs nKd wK
+
+---
+
+The output of the program should be
+
+---
+
+n // the center node label
+
+--
+
+To those who write the program using boost, there will be bonus score.
+
+Submission: via ESPA
+
+Due date: Dec. 22 4:00 pm
+
+ 
+
+l  Input file : graph.inp, output file : graph.out, source code : graph.cpp
+
+l  18.12.10 : sample data upload : download
+
+ 

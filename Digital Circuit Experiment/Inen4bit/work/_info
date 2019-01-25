@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\quartus\Inen4bit
+vInen4bit
+Z1 !s100 cnad>M[`FibW1nWJInjZ;2
+Z2 IC9B92;H^2b[?a=W;j3IAK0
+Z3 V32:<j=3GPR4G;H8Q4je9o1
+Z4 dH:\quartus\Inen4bit
+Z5 w1505296508
+Z6 8H:/quartus/Inen4bit/Inen4bit.v
+Z7 FH:/quartus/Inen4bit/Inen4bit.v
+L0 19
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|H:/quartus/Inen4bit/Inen4bit.v|
+Z10 o-work work -O0
+Z11 n@inen4bit
+!i10b 1
+!s85 0
+Z12 !s108 1505298556.646000
+Z13 !s107 H:/quartus/Inen4bit/Inen4bit.v|
+!s101 -O0
+vInen4bit_tb
+!i10b 1
+!s100 1bDidOl428JL31kOgg?zX2
+I2Weh1RD8M==9g5lf4[9UC0
+Z14 V21XTQFADziQCkmX<I`5Pk2
+R4
+w1505298537
+Z15 8H:/quartus/Inen4bit/Inen4bit_tb.v
+Z16 FH:/quartus/Inen4bit/Inen4bit_tb.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1505298556.724000
+!s107 H:/quartus/Inen4bit/Inen4bit_tb.v|
+Z17 !s90 -reportprogress|300|-work|work|H:/quartus/Inen4bit/Inen4bit_tb.v|
+!s101 -O0
+R10
+Z18 n@inen4bit_tb

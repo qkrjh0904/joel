@@ -1,0 +1,66 @@
+Assignment 4: Tree ? Production Cost
+
+A machine consists of multiple components A1, A2, ¡¦, An. Any component B is either a final item or composed of other subcomponents B1, B2, ¡¦, Bn. If it is a final item, the price of this item is given as an integer value. If it is composed of other subcomponents, an assembling cost (integer value) is assigned to it as the following figure;
+
+
+
+Write a program that calculates the production cost of a machine and output it to file (tree.out), when the input file (tree.inp) is given as follows;
+
+
+Source code should contain tree structure of this data, and total cost should be calculated by using recursive function (searching tree method). If you don¡¯t use tree structure, we will regard as you don¡¯t submit this assignment.
+
+ 
+
+N // the number of total components
+
+A Cost n A1 A2 ¡¦ An // n is the number of subcomponents. When n=0, A is a final item. This line is repeated as the number of total components
+
+ 
+
+For example, the input file for the figure above is;
+
+ 
+
+15
+
+A 210 4 B1 B2 B3 B4
+
+B1 150 3 C1 C2 C3
+
+B2 120 0
+
+¡¦
+
+F1 372 0
+
+F2 721 0
+
+ 
+
+the output file;
+
+ 
+
+5307
+
+ 
+
+ 
+
+The program should be submitted via ESPA by Nov.26, 3pm.
+
+- Source code: tree.cpp OR tree.java,
+
+- Input file: tree.inp,
+
+- output file: tree.out
+
+- sample data: download
+
+ 
+
+l  Nov.14 : Sample data was uploaded
+
+l  Nov.14 : Input data format is changed. (remove comma)
+
+l  You can submit assignment in ESPA from Nov.16, 6pm

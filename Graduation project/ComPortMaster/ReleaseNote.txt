@@ -1,0 +1,45 @@
+ComPortMaster
+Copyright (c) 2003-2010 Withrobot, Inc.  All rights reserved.
+
+-- Release Note --
+
+== ver 1.4.0 ==
+Mar/16/2010
+- Support custom baudrate. User can directly type baudrate value in baudrate
+  selection box.
+- Enhance 'Auto CR/LF' feature.
+- Enhance receiving response.
+- Distribute in Windows Installer package form.
+
+== ver 1.3.0 ==
+May/04/2009
+- Add 1200, 230400, 460800, 921600 bps in baudrate selection.
+- Add 'Send Endless' checkbox.
+- Add keyboard shortcut to Recv panel. Recv panel must have active focus to
+  work with shortcuts.
+    - Ctrl+A : Select All
+    - Ctrl+C : Copy selected to clipboard
+- Fix Auto CR/LF in SLIP mode bug.
+- Fix a bug in capturing Hex data.
+- Add CR/LF policy selection on Tools panel.
+
+== ver 1.2.0 ==
+Sep/05/2008
+- Handle Hibernation mode. close open port at suspend and re-open at resume.
+- Fix paralyzing bug on suprise removal of USB-to-Serial device like a
+  myUSB2UART.
+- Add 'Show Device Manager' button on 'Tools and Options' panel.
+
+== ver 1.1 ==
+Jul/24/2008
+- Add 'Auto CR/LF' function in SLIP decoding mode. If 'Auto CR/LF' and 'Decode
+  SLIP' are both checked, 'CR/LF' will be appended automatically for every
+  received SLIP packet.
+- Recv panel has been expaned to 80 columns.
+- Add 'Quick Send'. Sends simple & frequent commands instantly.
+- Add 'Capture' function to dump received data to a file.
+- CMD box will not be shown unless WRPu is checked.
+
+== ver 1.0 ==
+Apr/24/2008
+- First official release.

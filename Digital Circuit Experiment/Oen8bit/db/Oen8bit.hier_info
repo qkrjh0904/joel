@@ -1,0 +1,65 @@
+|Oen8bit
+data_out[0] <= Oen4bit:inst.data_out[0]
+data_out[1] <= Oen4bit:inst.data_out[1]
+data_out[2] <= Oen4bit:inst.data_out[2]
+data_out[3] <= Oen4bit:inst.data_out[3]
+data_out[4] <= Oen4bit:inst1.data_out[0]
+data_out[5] <= Oen4bit:inst1.data_out[1]
+data_out[6] <= Oen4bit:inst1.data_out[2]
+data_out[7] <= Oen4bit:inst1.data_out[3]
+Oen => Oen4bit:inst.Oen
+Oen => Oen4bit:inst1.Oen
+clk => Oen4bit:inst.clk
+clk => Oen4bit:inst1.clk
+clr => Oen4bit:inst.clr
+clr => Oen4bit:inst1.clr
+data_in[0] => Oen4bit:inst.data_in[0]
+data_in[1] => Oen4bit:inst.data_in[1]
+data_in[2] => Oen4bit:inst.data_in[2]
+data_in[3] => Oen4bit:inst.data_in[3]
+data_in[4] => Oen4bit:inst1.data_in[0]
+data_in[5] => Oen4bit:inst1.data_in[1]
+data_in[6] => Oen4bit:inst1.data_in[2]
+data_in[7] => Oen4bit:inst1.data_in[3]
+
+
+|Oen8bit|Oen4bit:inst
+data_out[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+clr => inst4.IN0
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+data_in[0] => inst.DATAIN
+data_in[1] => inst1.DATAIN
+data_in[2] => inst2.DATAIN
+data_in[3] => inst3.DATAIN
+Oen => inst5.OE
+Oen => inst6.OE
+Oen => inst7.OE
+Oen => inst8.OE
+
+
+|Oen8bit|Oen4bit:inst1
+data_out[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+clr => inst4.IN0
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+data_in[0] => inst.DATAIN
+data_in[1] => inst1.DATAIN
+data_in[2] => inst2.DATAIN
+data_in[3] => inst3.DATAIN
+Oen => inst5.OE
+Oen => inst6.OE
+Oen => inst7.OE
+Oen => inst8.OE
+
+

@@ -1,0 +1,167 @@
+|Fourbit_Mul
+x[0] => SYNTHESIZED_WIRE_4.IN0
+x[0] => SYNTHESIZED_WIRE_31.IN0
+x[0] => SYNTHESIZED_WIRE_29.IN0
+x[0] => mul_ALTERA_SYNTHESIZED.IN0
+x[1] => SYNTHESIZED_WIRE_3.IN0
+x[1] => SYNTHESIZED_WIRE_6.IN0
+x[1] => SYNTHESIZED_WIRE_9.IN0
+x[1] => SYNTHESIZED_WIRE_24.IN0
+x[2] => SYNTHESIZED_WIRE_5.IN0
+x[2] => SYNTHESIZED_WIRE_1.IN0
+x[2] => SYNTHESIZED_WIRE_12.IN0
+x[2] => SYNTHESIZED_WIRE_21.IN0
+x[3] => SYNTHESIZED_WIRE_0.IN0
+x[3] => SYNTHESIZED_WIRE_26.IN0
+x[3] => SYNTHESIZED_WIRE_15.IN0
+x[3] => SYNTHESIZED_WIRE_18.IN0
+y[0] => SYNTHESIZED_WIRE_3.IN1
+y[0] => SYNTHESIZED_WIRE_5.IN1
+y[0] => SYNTHESIZED_WIRE_0.IN1
+y[0] => mul_ALTERA_SYNTHESIZED.IN1
+y[1] => SYNTHESIZED_WIRE_1.IN1
+y[1] => SYNTHESIZED_WIRE_6.IN1
+y[1] => SYNTHESIZED_WIRE_4.IN1
+y[1] => SYNTHESIZED_WIRE_26.IN1
+y[2] => SYNTHESIZED_WIRE_31.IN1
+y[2] => SYNTHESIZED_WIRE_9.IN1
+y[2] => SYNTHESIZED_WIRE_12.IN1
+y[2] => SYNTHESIZED_WIRE_15.IN1
+y[3] => SYNTHESIZED_WIRE_29.IN1
+y[3] => SYNTHESIZED_WIRE_24.IN1
+y[3] => SYNTHESIZED_WIRE_21.IN1
+y[3] => SYNTHESIZED_WIRE_18.IN1
+mul[0] <= mul_ALTERA_SYNTHESIZED.DB_MAX_OUTPUT_PORT_TYPE
+mul[1] <= HalfAdder:b2v_inst1.sum
+mul[2] <= HalfAdder:b2v_inst5.sum
+mul[3] <= HalfAdder:b2v_inst39.sum
+mul[4] <= FullAdder:b2v_inst19.sum
+mul[5] <= FullAdder:b2v_inst15.sum
+mul[6] <= FullAdder:b2v_inst14.sum
+mul[7] <= FullAdder:b2v_inst14.c_out
+
+
+|Fourbit_Mul|FullAdder:b2v_inst
+y_in => SYNTHESIZED_WIRE_1.IN0
+y_in => SYNTHESIZED_WIRE_4.IN0
+x_in => SYNTHESIZED_WIRE_1.IN1
+x_in => SYNTHESIZED_WIRE_4.IN1
+c_in => SYNTHESIZED_WIRE_2.IN1
+c_in => sum.IN1
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|HalfAdder:b2v_inst1
+x_in => sum.IN0
+x_in => c_out.IN0
+y_in => sum.IN1
+y_in => c_out.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|FullAdder:b2v_inst10
+y_in => SYNTHESIZED_WIRE_1.IN0
+y_in => SYNTHESIZED_WIRE_4.IN0
+x_in => SYNTHESIZED_WIRE_1.IN1
+x_in => SYNTHESIZED_WIRE_4.IN1
+c_in => SYNTHESIZED_WIRE_2.IN1
+c_in => sum.IN1
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|FullAdder:b2v_inst11
+y_in => SYNTHESIZED_WIRE_1.IN0
+y_in => SYNTHESIZED_WIRE_4.IN0
+x_in => SYNTHESIZED_WIRE_1.IN1
+x_in => SYNTHESIZED_WIRE_4.IN1
+c_in => SYNTHESIZED_WIRE_2.IN1
+c_in => sum.IN1
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|FullAdder:b2v_inst12
+y_in => SYNTHESIZED_WIRE_1.IN0
+y_in => SYNTHESIZED_WIRE_4.IN0
+x_in => SYNTHESIZED_WIRE_1.IN1
+x_in => SYNTHESIZED_WIRE_4.IN1
+c_in => SYNTHESIZED_WIRE_2.IN1
+c_in => sum.IN1
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|FullAdder:b2v_inst13
+y_in => SYNTHESIZED_WIRE_1.IN0
+y_in => SYNTHESIZED_WIRE_4.IN0
+x_in => SYNTHESIZED_WIRE_1.IN1
+x_in => SYNTHESIZED_WIRE_4.IN1
+c_in => SYNTHESIZED_WIRE_2.IN1
+c_in => sum.IN1
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|FullAdder:b2v_inst14
+y_in => SYNTHESIZED_WIRE_1.IN0
+y_in => SYNTHESIZED_WIRE_4.IN0
+x_in => SYNTHESIZED_WIRE_1.IN1
+x_in => SYNTHESIZED_WIRE_4.IN1
+c_in => SYNTHESIZED_WIRE_2.IN1
+c_in => sum.IN1
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|FullAdder:b2v_inst15
+y_in => SYNTHESIZED_WIRE_1.IN0
+y_in => SYNTHESIZED_WIRE_4.IN0
+x_in => SYNTHESIZED_WIRE_1.IN1
+x_in => SYNTHESIZED_WIRE_4.IN1
+c_in => SYNTHESIZED_WIRE_2.IN1
+c_in => sum.IN1
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|FullAdder:b2v_inst19
+y_in => SYNTHESIZED_WIRE_1.IN0
+y_in => SYNTHESIZED_WIRE_4.IN0
+x_in => SYNTHESIZED_WIRE_1.IN1
+x_in => SYNTHESIZED_WIRE_4.IN1
+c_in => SYNTHESIZED_WIRE_2.IN1
+c_in => sum.IN1
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|HalfAdder:b2v_inst3
+x_in => sum.IN0
+x_in => c_out.IN0
+y_in => sum.IN1
+y_in => c_out.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|HalfAdder:b2v_inst39
+x_in => sum.IN0
+x_in => c_out.IN0
+y_in => sum.IN1
+y_in => c_out.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fourbit_Mul|HalfAdder:b2v_inst5
+x_in => sum.IN0
+x_in => c_out.IN0
+y_in => sum.IN1
+y_in => c_out.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,29 @@
+{D:/computer arch HW/Fourbit_Mul/Fourbit_Mul_tb.v} {1 {vlog -work work {D:/computer arch HW/Fourbit_Mul/Fourbit_Mul_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Fourbit_Mul_tb
+
+Top level modules:
+	Fourbit_Mul_tb
+
+} {} {}} {D:/computer arch HW/Fourbit_Mul/HalfAdder.v} {1 {vlog -work work {D:/computer arch HW/Fourbit_Mul/HalfAdder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module HalfAdder
+
+Top level modules:
+	HalfAdder
+
+} {} {}} {D:/computer arch HW/Fourbit_Mul/FullAdder.v} {1 {vlog -work work {D:/computer arch HW/Fourbit_Mul/FullAdder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module FullAdder
+
+Top level modules:
+	FullAdder
+
+} {} {}} {D:/computer arch HW/Fourbit_Mul/Fourbit_Mul.v} {1 {vlog -work work {D:/computer arch HW/Fourbit_Mul/Fourbit_Mul.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Fourbit_Mul
+
+Top level modules:
+	Fourbit_Mul
+
+} {} {}}

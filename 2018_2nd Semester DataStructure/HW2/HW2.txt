@@ -1,0 +1,17 @@
+Assignment 2: evaluating arithmetic expression
+
+Write a C++ (or Java) program which reads an arithmetic expression in infix notation from a file, stack.inp, converts and evaluates it using stacks, and prints it to a file, stack.out. The arithmetic expression is composed of natural number and four operators +. -. *, and /. An example of stack.inp is as
+
+3 * 4 ? 4 / 3 * 3 + 4
+
+Note the followings;
+
+-      the result of division operator (/) is an integer value such as 5/3=1,
+
+-      the tokens in the expression are separated by a blank space,
+
+-      the subtraction operator (-) is binary, and
+
+-      the number of operands in an expression is no more than 100.
+
+The program should be submitted via ESPA by Oct. 18, 6:00 pm.

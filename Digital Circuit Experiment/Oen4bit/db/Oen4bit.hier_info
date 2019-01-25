@@ -1,0 +1,20 @@
+|Oen4bit
+data_out[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+clr => inst4.IN0
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+data_in[0] => inst.DATAIN
+data_in[1] => inst1.DATAIN
+data_in[2] => inst2.DATAIN
+data_in[3] => inst3.DATAIN
+Oen => inst5.OE
+Oen => inst6.OE
+Oen => inst7.OE
+Oen => inst8.OE
+
+

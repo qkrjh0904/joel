@@ -1,0 +1,63 @@
+Assignment 1: Rank Array
+
+ 
+
+The score of each student in a class is represented as (StudentID, S1, S2, S3, ・ SK), where K is the number of subjects, Si is a score of subject i and N is the number of students. The total scores of students are stored as an array of N student scores. Write a program in C++ or Java for the following functions;
+
+1.      Read the scores of N students given by scores.inp file. The format of the file is;
+
+N K T    // number of students, number of subjects, subject ST will be sorted
+
+ID1 S11 S12 ・ S1K
+
+ID2 S21 S22 ・ S2K
+
+・
+
+IDN SN1 SN2 ・ SNK
+
+ 
+
+2.      Answers to the following 3 questions output to scores.out file.
+
+A.       In first N + 1 rows, sort T-th course and output the ranks of the subjects as the following format;
+
+N             // number of students
+
+ID1 R11 R12 ・ R1K
+
+ID2 R21 R22 ・ R2K
+
+・
+
+IDN RN1 RN2 ・ RNK
+
+l  1 ‖ T ‖ K
+
+ 
+
+B.       In next rows after A, count the list of students within top 3 for more than three subjects. In first row, M, is the number of these students. And in next M rows, output the list of these students by ascending order of ID;
+
+M // number of conditional students
+
+ID1 R11 R12 ・ R1K
+
+ID2 R21 R22 ・ R2K
+
+・
+
+IDM RM1 RM2 ・ RMK
+
+ 
+
+C.       Count the pairs of two students s1 and s2, where the rank of s1 for a subject (at least one subject) is ahead of s2 by more than 2 and the rank of s2 is ahead of s1 by more than 10 for at least one of the other subjects. At next row after B, output the number of pairs, which was counted.
+
+l  s1 != s2 and (s1, s2) is same pair as (s2, s1)
+
+ 
+
+Source file of program should be scores.cpp or scores.java. The due date is by Sept 28 (6 pm). Your program should be submitted via ESPA site. You may find sample data about input and output in ESPA site. The detail instruction for ESPA is available via web.
+
+ 
+
+-          18-09-18 : Sample data is updated

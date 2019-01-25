@@ -1,0 +1,46 @@
+
+                      ComPortMaster License, Version 1.4.0
+                      ====================================
+
+  Copyright (c) 2007-2010 withrobot Co.
+
+                  COMPORTMASTER LIBRARY LICENCE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  This program is free software; you can redistribute it and/or modify it
+  without any permision or charge.
+
+
+  This program may be installed and Used by the Licensee for any legal purpose.
+
+  This program may be installed and Used by the Licensee on any number of
+  computers owned, leased or controlled by the Licensee.
+
+  This program can be copied and distributed under the condition that original
+  copyright notice and disclaimer of warranty will stay intact and the
+  Licensee will not charge money or fees for the Software product, except to
+  cover distribution costs.
+
+  This Licensee will not have any proprietary rights in and to the Software.
+  The Licensee acknowledges and agrees that the Licensor retains all
+  copyrights and other proprietary rights in and to the Software.
+
+  Use within the scope of this License is free of charge and no royalty or
+  licensing fees shall be paid by the Licensee.
+
+
+                            LIMITATION OF LIABILITY
+
+  In no event will the Licensor or its suppliers be liable for any damages,
+  claims or costs whatsoever or any consequential, indirect, incidental
+  damages, or any lost profits or lost savings, even if the Licensor has been
+  advised of the possibility of such loss, damages, claims or costs or for
+  any claim by any third party.
+
+  In no event will the Licensee be liable to the Licensor on condition that
+  the Licensee complies with all terms and conditions stated in this License.
+
+
+        http://www.withrobot.com/category/Interface/ComPortMaster
+
+

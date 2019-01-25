@@ -1,0 +1,86 @@
+/* Segway_Timer 관련 c파일*/
+#include "stm32f4xx.h"
+#include "segway_header.h"
+#include <stdio.h>
+#include <math.h>
+
+int16_t Tim_Prescaler = 84-1;
+int16_t Tim_Period = 5000-1;
+float Tim_Dt;	// 제어 주기
+float Temp;
+extern float Output_Right;
+extern float Output_Left;
+extern float Angle_Pitch, Angle_Roll;
+extern char buf[100];
+
+void TIM5_Config(void)
+{
+	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;					// TIMEBASE Type 재정의
+	NVIC_InitTypeDef NVIC_InitStructure;							// NVIC Type 재정의
+    
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM5, ENABLE);			// TIM5 Clock 설정
+  
+	TIM_TimeBaseStructure.TIM_Prescaler = Tim_Prescaler;			// 84MHz/84 = 1MHz
+	TIM_TimeBaseStructure.TIM_Period = Tim_Period;					// 0.000001 * 1000 = 0.001 = 1ms
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;		// 업카운트 모드
+	TIM_TimeBaseStructure.TIM_ClockDivision = 0;					// 디지털 필터 및 dead band에 사용
+	TIM_TimeBaseInit(TIM5, &TIM_TimeBaseStructure);              
+	TIM_ITConfig(TIM5,TIM_IT_Update, ENABLE);						// TIM9 인터럽트 업데이트 사용
+	TIM_Cmd(TIM5,ENABLE);    
+
+	TIM_Dt(Tim_Prescaler, Tim_Period);						// 제어주기,적분 값	
+
+	NVIC_InitStructure.NVIC_IRQChannel = TIM5_IRQn;					// TIM5 인터럽트 핸들러 사용
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x00;	// 우선순위 0
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;			// 서브 우선순위 0
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;					// IRQHandler사용
+
+	NVIC_Init(&NVIC_InitStructure);
+}
+
+void TIM_Dt(int16_t Prescaler, int16_t Period)
+{
+    Temp = (float)1/(84000000/((Prescaler+1)*(Period+1)));
+	Tim_Dt = Temp;
+}
+
+void TIM5_IRQHandler(void)
+{
+	if(TIM_GetITStatus(TIM5,TIM_IT_Update)==SET) // 인터럽트 발생했는지 확인 
+	{
+		TIM_ClearITPendingBit(TIM5, TIM_IT_Update);
+		IMU_Read();
+               // angle_roll = -35;
+		Output_Right = Angle_Roll * 111.11;
+		Output_Left	= Angle_Roll * 111.11;
+
+		PWM1_CCW();
+		PWM2_CCW();		// 정방향	 
+
+		
+		if(Angle_Roll < 0)
+		{
+			Output_Right = Angle_Roll * -111.11;
+			Output_Left	= Angle_Roll * -111.11;
+
+			PWM1_CW();
+			PWM2_CW(); //역방향
+
+		}
+
+		// Segway PWM Output -> Max:5000, Min:0
+		TIM_SetCompare1(TIM9, (uint16_t)Output_Right);
+		TIM_SetCompare2(TIM9, (uint16_t)Output_Left);
+
+		// SEA PWM Output    -> Max:5000, Min:0
+//		TIM_SetCompare1(TIM1, (uint16_t)1000);
+//		TIM_SetCompare2(TIM1, (uint16_t)2000);
+//		TIM_SetCompare3(TIM1, (uint16_t)3000);
+//		TIM_SetCompare4(TIM1, (uint16_t)4000);
+
+		sprintf(buf,"%6.2f \n",Angle_Roll);		// UART 사용법
+		USART_puts(USART1, buf); 
+//		flag=1;
+	}
+}
+

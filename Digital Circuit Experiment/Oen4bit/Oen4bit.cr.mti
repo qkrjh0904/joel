@@ -1,0 +1,15 @@
+H:/quartus/Oen4bit/Oen4bit.v {1 {vlog -work work H:/quartus/Oen4bit/Oen4bit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Oen4bit
+
+Top level modules:
+	Oen4bit
+
+} {} {}} H:/quartus/Oen4bit/Oen4bit_tb.v {1 {vlog -work work H:/quartus/Oen4bit/Oen4bit_tb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Oen4bit_tb
+
+Top level modules:
+	Oen4bit_tb
+
+} {} {}}

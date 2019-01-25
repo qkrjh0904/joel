@@ -1,0 +1,81 @@
+|InenOen8bit
+data_out[0] <= InenOen4bit:inst.data_out[0]
+data_out[1] <= InenOen4bit:inst.data_out[1]
+data_out[2] <= InenOen4bit:inst.data_out[2]
+data_out[3] <= InenOen4bit:inst.data_out[3]
+data_out[4] <= InenOen4bit:inst4.data_out[0]
+data_out[5] <= InenOen4bit:inst4.data_out[1]
+data_out[6] <= InenOen4bit:inst4.data_out[2]
+data_out[7] <= InenOen4bit:inst4.data_out[3]
+Oen => InenOen4bit:inst.Oen
+Oen => InenOen4bit:inst4.Oen
+clk => InenOen4bit:inst.clk
+clk => InenOen4bit:inst4.clk
+Inen => InenOen4bit:inst.Inen
+Inen => InenOen4bit:inst4.Inen
+clr => InenOen4bit:inst.clr
+clr => InenOen4bit:inst4.clr
+data_in[0] => InenOen4bit:inst.data_in[0]
+data_in[1] => InenOen4bit:inst.data_in[1]
+data_in[2] => InenOen4bit:inst.data_in[2]
+data_in[3] => InenOen4bit:inst.data_in[3]
+data_in[4] => InenOen4bit:inst4.data_in[0]
+data_in[5] => InenOen4bit:inst4.data_in[1]
+data_in[6] => InenOen4bit:inst4.data_in[2]
+data_in[7] => InenOen4bit:inst4.data_in[3]
+
+
+|InenOen8bit|InenOen4bit:inst
+clr => DFFE_inst10.ACLR
+clr => DFFE_inst11.ACLR
+clr => DFFE_inst12.ACLR
+clr => DFFE_inst9.ACLR
+clk => DFFE_inst9.CLK
+clk => DFFE_inst12.CLK
+clk => DFFE_inst11.CLK
+clk => DFFE_inst10.CLK
+Inen => DFFE_inst9.ENA
+Inen => DFFE_inst10.ENA
+Inen => DFFE_inst11.ENA
+Inen => DFFE_inst12.ENA
+Oen => data_out_ALTERA_SYNTHESIZED[3].OE
+Oen => data_out_ALTERA_SYNTHESIZED[2].OE
+Oen => data_out_ALTERA_SYNTHESIZED[1].OE
+Oen => data_out_ALTERA_SYNTHESIZED[0].OE
+data_in[0] => DFFE_inst9.DATAIN
+data_in[1] => DFFE_inst10.DATAIN
+data_in[2] => DFFE_inst11.DATAIN
+data_in[3] => DFFE_inst12.DATAIN
+data_out[0] <= data_out_ALTERA_SYNTHESIZED[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out_ALTERA_SYNTHESIZED[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out_ALTERA_SYNTHESIZED[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out_ALTERA_SYNTHESIZED[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InenOen8bit|InenOen4bit:inst4
+clr => DFFE_inst10.ACLR
+clr => DFFE_inst11.ACLR
+clr => DFFE_inst12.ACLR
+clr => DFFE_inst9.ACLR
+clk => DFFE_inst9.CLK
+clk => DFFE_inst12.CLK
+clk => DFFE_inst11.CLK
+clk => DFFE_inst10.CLK
+Inen => DFFE_inst9.ENA
+Inen => DFFE_inst10.ENA
+Inen => DFFE_inst11.ENA
+Inen => DFFE_inst12.ENA
+Oen => data_out_ALTERA_SYNTHESIZED[3].OE
+Oen => data_out_ALTERA_SYNTHESIZED[2].OE
+Oen => data_out_ALTERA_SYNTHESIZED[1].OE
+Oen => data_out_ALTERA_SYNTHESIZED[0].OE
+data_in[0] => DFFE_inst9.DATAIN
+data_in[1] => DFFE_inst10.DATAIN
+data_in[2] => DFFE_inst11.DATAIN
+data_in[3] => DFFE_inst12.DATAIN
+data_out[0] <= data_out_ALTERA_SYNTHESIZED[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out_ALTERA_SYNTHESIZED[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out_ALTERA_SYNTHESIZED[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out_ALTERA_SYNTHESIZED[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

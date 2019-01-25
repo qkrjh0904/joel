@@ -1,0 +1,27 @@
+10 GOSUB 400
+20 PRINT "|     | MON | TUE | WED | THU | FRI |"
+30 GOSUB 400
+40 PRINT "|09:00|     |     |     |     |     |"
+50 GOSUB 420
+60 GOSUB 400
+70 PRINT "|10:30|     |     |     |     |     |"
+80 GOSUB 420
+90 GOSUB 400
+100 PRINT "|12:00|     |     |     |     |     |"
+110 GOSUB 420
+120 GOSUB 400
+130 PRINT "|13:30|     |     |     |     |     |"
+140 GOSUB 420
+150 GOSUB 400
+160 PRINT "|15:00|     |     |     |     |     |"
+170 GOSUB 420
+180 GOSUB 400
+190 PRINT "|16:30|     |     |     |     |     |"
+200 GOSUB 420
+210 GOSUB 400
+220 END
+
+400 PRINT "+-----+-----+-----+-----+-----+-----+"
+410 RETURN
+420 PRINT "|     |     |     |     |     |     |"
+430 RETURN

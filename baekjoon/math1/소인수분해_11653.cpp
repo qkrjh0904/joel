@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int answer(){
+void answer(){
 	int n;
 	cin>>n;
 	

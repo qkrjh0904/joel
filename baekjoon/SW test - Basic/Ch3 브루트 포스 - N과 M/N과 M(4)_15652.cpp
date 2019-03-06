@@ -14,8 +14,7 @@ void go(int index, int start, int n, int m){
 	}
 	for(int i=start; i<=n; ++i){
 		a[index] = i;
-		go(index+1, start, n, m);
-		start += 1;
+		go(index+1, i, n, m);
 	}
 }
 int main(){

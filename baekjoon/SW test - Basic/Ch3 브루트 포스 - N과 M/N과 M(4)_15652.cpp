@@ -3,28 +3,26 @@
 
 using namespace std;
 
-vector<bool> check(10);
 vector<int> a(10);
 
-void go(int index, int n, int m){
+void go(int index, int start, int n, int m){
 	if( index==m ){
 		for(int i=0; i<m; ++i)
 			cout<<a[i]<<' ';
 		cout<<'\n';
 		return;
 	}
-	for(int i=1; i<=n; ++i){
-		check[i] = true;
+	for(int i=start; i<=n; ++i){
 		a[index] = i;
-		go(index+1, n, m);
-		check[i] = false;
+		go(index+1, start, n, m);
+		start += 1;
 	}
 }
 int main(){
 	int n, m;
 	scanf("%d %d", &n, &m);
 	
-	go(0, n, m);
+	go(0, 1, n, m);
 	
 	
 	

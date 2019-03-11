@@ -7,6 +7,7 @@ void solution(){
 	cin>>n;
 	
 	long long answer=0;
+	
 	if(n>9)
 		answer += 9;
 	else{

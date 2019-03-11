@@ -34,14 +34,6 @@ void solution(){
 			else
 				team_b.push_back(i);
 		}
-
-//		for(int i=0; i<n/2; ++i){
-//			cout<<team_a[i]<<' ';
-//		}cout<<"    ";
-//		for(int i=0; i<n/2; ++i){
-//			cout<<team_b[i]<<' ';
-//		}cout<<endl;
-		
 		
 		for(int i=0; i<team_a.size()-1; ++i){
 			for(int j=i+1; j<team_a.size(); ++j){
@@ -49,19 +41,11 @@ void solution(){
 				score_b += (v[team_b[i]-1][team_b[j]-1] + v[team_b[j]-1][team_b[i]-1]);
 			}
 		}
-//		cout<<score_a<<' '<<score_b<<endl;
 		int temp = abs(score_a-score_b);
 		answer = min(answer, temp);
-//		team_a.erase(team_a.begin(), team_a.end());
-//		team_b.erase(team_b.begin(), team_b.end());
 	}while(next_permutation(team.begin(), team.end())); 
 	
 	cout<<answer<<'\n';
-
-
-
-
-
 }
 
 int main(){

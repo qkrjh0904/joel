@@ -33,27 +33,7 @@ void answer(){
 			break;
 		}
 	}
-	
-//	int max = m*n;
-//	int answer=1;
-//	int now_x=1, now_y=1;
-//	while(true){
-//		if(now_x>m)
-//			now_x -= m;
-//		if(now_y>n)
-//			now_y -= n;
-//		if(now_x==x && now_y==y){
-//			printf("%d\n", answer);
-//			break;
-//		}
-//		now_x++;
-//		now_y++;
-//		answer++;
-//		if(answer>max){
-//			printf("%d\n", -1);
-//			break;
-//		}
-//	}
+
 }
 
 int main(){

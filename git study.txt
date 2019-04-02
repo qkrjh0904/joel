@@ -1,0 +1,11 @@
+현재 branch 상태	: git branch
+joel 브랜치 생성	: git branch joel
+joel로 헤드 변경	: git checkout joel
+commit 상태 조회	: git log
+코드 합치기		: git checkout master -> git merge joel
+branch 제거	: git branch -d joel
+
+현재 원격저장소	: git remote
+원격저장소 정보	: git remote show origin
+
+commit 내역 수정	: git commit --amend

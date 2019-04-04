@@ -4,8 +4,6 @@ using namespace std;
 
 int a[20][20] = {0, };
 int dice[6] = {0, }; //위, 아래, 동, 서, 남, 북 
-int dx[4] = {0, 0, -1, 1};
-int dy[4] = {1, -1, 0, 0};
 
 void diceRolling(int input){
 	int temp; 
